@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Documentación
+
+                <a href="api/documentation">Cliente rest</a>
                 </div>
             </div>
         </div>

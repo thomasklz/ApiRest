@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Agregamos nuestra ruta al controller de Personas
+Route::apiResource('v01/personas', 'PersonasController');

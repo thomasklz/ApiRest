@@ -1,0 +1,198 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Customer rest to test examples",
+        "version": "1.0.0"
+    },
+    "basePath": "/api/v01",
+    "paths": {
+        "/personas": {
+            "get": {
+                "tags": [
+                    "Person"
+                ],
+                "summary": "List persons",
+                "operationId": "getCustomerRates",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Person"
+                ],
+                "summary": "create person",
+                "operationId": "createPerson",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Into name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "apellido",
+                        "in": "formData",
+                        "description": "Into last name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cedula",
+                        "in": "formData",
+                        "description": "Into identification card",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "direccion",
+                        "in": "formData",
+                        "description": "Into address",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "telefono",
+                        "in": "formData",
+                        "description": "Into phone",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "create person successful"
+                    },
+                    "400": {
+                        "description": "identification exist"
+                    },
+                    "422": {
+                        "description": "unprocessable entity"
+                    }
+                }
+            }
+        },
+        "/personas/{personId}": {
+            "get": {
+                "tags": [
+                    "Person"
+                ],
+                "summary": "get person",
+                "operationId": "getPerson",
+                "parameters": [
+                    {
+                        "name": "personId",
+                        "in": "path",
+                        "description": "Into personID",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Person"
+                ],
+                "summary": "update person",
+                "operationId": "updatePerson",
+                "parameters": [
+                    {
+                        "name": "personId",
+                        "in": "path",
+                        "description": "Into personId",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Into name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "apellido",
+                        "in": "formData",
+                        "description": "Into last name",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "cedula",
+                        "in": "formData",
+                        "description": "Into identification card",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "direccion",
+                        "in": "formData",
+                        "description": "Into address",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "telefono",
+                        "in": "formData",
+                        "description": "Into phone",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "update person successful"
+                    },
+                    "400": {
+                        "description": "identification exist"
+                    },
+                    "404": {
+                        "description": "not found"
+                    },
+                    "422": {
+                        "description": "unprocessable entity"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Person"
+                ],
+                "summary": "delete person",
+                "operationId": "deletePerson",
+                "parameters": [
+                    {
+                        "name": "personId",
+                        "in": "path",
+                        "description": "Into personID",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "delete person successful"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
