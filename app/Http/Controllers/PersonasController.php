@@ -251,8 +251,8 @@ class PersonasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    /**
-     * @SWG\delete(
+     /**
+     * @SWG\Delete(
      *   path="/persona/{personId}",
      *   tags={"Person"},
      *   summary="delete person",
