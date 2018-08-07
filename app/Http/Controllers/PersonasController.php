@@ -12,7 +12,12 @@ class PersonasController extends Controller
      *   basePath="/api/v01",
      *   @SWG\Info(
      *     title="Customer rest to test examples",
-     *     version="1.0.0"
+     *     version="1.0.0",
+     *     description="Client rest with Laravel",
+     *     termsOfService="",
+     *     @SWG\Contact(
+     *             email="piposrgt@gmail.com"
+     *         )
      *   )
      * )
      */
@@ -23,7 +28,7 @@ class PersonasController extends Controller
      */
     /**
      * @SWG\Get(
-     *   path="/personas",
+     *   path="/persona",
      *   tags={"Person"},
      *   summary="List persons",
      *   operationId="getCustomerRates",
@@ -45,7 +50,7 @@ class PersonasController extends Controller
      */
     /**
      * @SWG\Post(
-     *   path="/personas",
+     *   path="/persona",
      *   tags={"Person"},
      *   summary="create person",
      *   operationId="createPerson",
@@ -122,7 +127,7 @@ class PersonasController extends Controller
      */
      /**
      * @SWG\Get(
-     *   path="/personas/{personId}",
+     *   path="/persona/{personId}",
      *   tags={"Person"},
      *   summary="get person",
      *   operationId="getPerson",
@@ -158,7 +163,7 @@ class PersonasController extends Controller
      */
     /**
      * @SWG\Put(
-     *   path="/personas/{personId}",
+     *   path="/persona/{personId}",
      *   tags={"Person"},
      *   summary="update person",
      *   operationId="updatePerson",
@@ -248,7 +253,7 @@ class PersonasController extends Controller
      */
     /**
      * @SWG\delete(
-     *   path="/personas/{personId}",
+     *   path="/persona/{personId}",
      *   tags={"Person"},
      *   summary="delete person",
      *   operationId="deletePerson",

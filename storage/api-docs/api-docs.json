@@ -2,11 +2,16 @@
     "swagger": "2.0",
     "info": {
         "title": "Customer rest to test examples",
+        "description": "Client rest with Laravel",
+        "termsOfService": "",
+        "contact": {
+            "email": "piposrgt@gmail.com"
+        },
         "version": "1.0.0"
     },
     "basePath": "/api/v01",
     "paths": {
-        "/personas": {
+        "/persona": {
             "get": {
                 "tags": [
                     "Person"
@@ -78,7 +83,7 @@
                 }
             }
         },
-        "/personas/{personId}": {
+        "/persona/{personId}": {
             "get": {
                 "tags": [
                     "Person"
