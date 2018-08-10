@@ -28,7 +28,7 @@ class PersonasController extends Controller
      */
     /**
      * @SWG\Get(
-     *   path="/persona",
+     *   path="/personas",
      *   tags={"Person"},
      *   summary="List persons",
      *   operationId="getCustomerRates",
@@ -49,7 +49,7 @@ class PersonasController extends Controller
      */
     /**
      * @SWG\Post(
-     *   path="/persona",
+     *   path="/personas",
      *   tags={"Person"},
      *   summary="create person",
      *   operationId="createPerson",
@@ -125,7 +125,7 @@ class PersonasController extends Controller
      */
      /**
      * @SWG\Get(
-     *   path="/persona/{personId}",
+     *   path="/personas/{personId}",
      *   tags={"Person"},
      *   summary="get person",
      *   operationId="getPerson",
@@ -160,7 +160,7 @@ class PersonasController extends Controller
      */
     /**
      * @SWG\Put(
-     *   path="/persona/{personId}",
+     *   path="/personas/{personId}",
      *   tags={"Person"},
      *   summary="update person",
      *   operationId="updatePerson",
@@ -247,7 +247,7 @@ class PersonasController extends Controller
      */
      /**
      * @SWG\Delete(
-     *   path="/persona/{personId}",
+     *   path="/personas/{personId}",
      *   tags={"Person"},
      *   summary="delete person",
      *   operationId="deletePerson",
