@@ -18,4 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //Agregamos nuestra ruta al controller de Personas
-Route::apiResource('v01/persona', 'PersonasController');
+Route::apiResource('v01/personas', 'PersonasController');
+Route::apiResource('v01/comentarios', 'ComentariosController');
+Route::get('v01/comentarios/persona/{id}', 'ComentariosController@getcomment');

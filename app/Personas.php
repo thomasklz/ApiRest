@@ -10,4 +10,8 @@ class Personas extends Model
     protected $fillable = [
         'name', 'apellido', 'cedula','direccion','telefono',
     ];
+
+    public function comentarios( ){
+    	 return $this->hasMany(Comentario::class);
+    }
 }

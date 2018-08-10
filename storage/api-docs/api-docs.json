@@ -11,6 +11,91 @@
     },
     "basePath": "/api/v01",
     "paths": {
+        "/comentarios": {
+            "get": {
+                "tags": [
+                    "Comment"
+                ],
+                "summary": "List comment",
+                "operationId": "getComment",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Comment"
+                ],
+                "summary": "create comment",
+                "operationId": "createComment",
+                "parameters": [
+                    {
+                        "name": "comentario",
+                        "in": "formData",
+                        "description": "Into comment",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "fechacreacion",
+                        "in": "formData",
+                        "description": "Into create date",
+                        "required": true,
+                        "type": "string",
+                        "format": "YYYY-mm-dd H:i:s"
+                    },
+                    {
+                        "name": "personas_id",
+                        "in": "formData",
+                        "description": "Into identification person",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "create comment successful"
+                    },
+                    "404": {
+                        "description": "not exist person"
+                    },
+                    "422": {
+                        "description": "unprocessable entity"
+                    }
+                }
+            }
+        },
+        "/comentarios/persona/{personas_id}": {
+            "get": {
+                "tags": [
+                    "Comment"
+                ],
+                "summary": "get comment to person",
+                "operationId": "getCommentPerson",
+                "parameters": [
+                    {
+                        "name": "personas_id",
+                        "in": "path",
+                        "description": "Into personID",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "404": {
+                        "description": "not found"
+                    }
+                }
+            }
+        },
         "/persona": {
             "get": {
                 "tags": [

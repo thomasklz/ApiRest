@@ -39,9 +39,8 @@ class PersonasController extends Controller
      */
     public function index()
     {
-        return  response()->json(['Personas'=> Personas::all()], 201); 
+        return  response()->json(['Personas'=> Personas::all()], 200); 
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -116,7 +115,6 @@ class PersonasController extends Controller
         //Guardamos el cambio en nuestro modelo
         $persona->save();
         return response()->json(['Message'=>'Dato ingresado correctamente'], 201);
-
     }
 
     /**
@@ -151,7 +149,6 @@ class PersonasController extends Controller
        }else{
             return response()->json(['Message'=>'No encontrado'], 404);
        }
-        
     }
 
     /**
@@ -240,9 +237,6 @@ class PersonasController extends Controller
         }else{
             return response()->json(['Message'=>'No encontrado'], 404);
         }
-        
-
-
     }
 
     /**
@@ -278,7 +272,5 @@ class PersonasController extends Controller
        }else{
             return response()->json(['Message'=>'No encontrado'], 404);
        }
-        
-        
     }
 }
